@@ -15,3 +15,13 @@
 .main {
     flex: 1 0 auto;
   }
+
+  .section {
+      height: 400px;
+  }
+
+  .overflow{
+      overflow-y: hidden;
+  }
+
+  

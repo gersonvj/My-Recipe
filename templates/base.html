@@ -31,7 +31,7 @@
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav opaco" id="mobile-demo">
             <li><h4 class="center-align text-shadow amber-text text-darken-3">My Recipe</h4></li>
             <li><a href="{{ url_for('get_ingredients')}}">Home</a></li>
             <li><a href="#">Profile</a></li>
@@ -43,6 +43,23 @@
             <li><a href="#">Register</a></li>
         </ul>
     </header>
+
+        <div class="parallax-container">
+            <div class="parallax left"><img src="https://foxvending.com/wp-content/uploads/2019/06/food-parallax.jpg"></div>
+        </div>
+        <div class="section white">
+        <div class="row container">
+            <h2 class="header">Register</h2>
+                <p class="grey-text text-darken-3 lighten-3 overflow">A recipe is a set of instructions that describes how to prepare or make something, especially a dish of prepared food.</p>
+                <p class="grey-text text-darken-3 lighten-3 overflow">Register Here to Create, read, update and delete your recipes! </p>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                <i class="material-icons right"></i>
+                </button>
+        </div>
+        </div>
+        <div class="parallax-container">
+        <div class="parallax"><img src="https://foxvending.com/wp-content/uploads/2019/06/food-parallax.jpg"></div>
+        </div>
     
     {% block content %}
     {% endblock %}
