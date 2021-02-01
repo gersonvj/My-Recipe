@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![multi platform](https://myrecipeproject.herokuapp.com/)
+=======
+### [View My Recipe APP in Heroku.com](https://myrecipeproject.herokuapp.com/)
+>>>>>>> b7c3c8c0db25cadaf86ea459e08a025dbb46dea9
 
 ## **Project Goal**
 
@@ -6,21 +10,20 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
 
 
   ## Table of contents 
-* [UX](#ux)🎯
+* [UX](#ux)
     * [User Goals](#user-goals)
     * [User Stories](#user-stories)
     * [Site Owners Goals](#site-owners-goals)
     * [User Requirements and Expectations](#user-requirements-and-expectations)
         * [Requirements](#requirements)
         * [Expectations](#expectations)    
-* [Wireframes and Flowcharts](#wireframes-and-flowcharts)👨‍🔧
+* [Wireframes](#wireframes)
     * [Wireframes](#wireframes)
-    * [Flowcharts](#flowcharts)
     * [Database Structure](#database-structure)
-* [Features](#features)🤖
+* [Features](#features)
     * [Existing Features](#existing-features)
     * [Features to be implemented](#features-to-be-implemented)
-* [Technologies used](#technologies-used)👀
+* [Technologies used](#technologies-used)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
     * [Tools](#tools)
@@ -74,18 +77,11 @@ I have chosen to use [Materialize](https://materializecss.com/) to create an ove
 Materialize provides various elements of CSS and Javascript which is very helpful to keep a good structure on your page. 
 
 
-## **Wireframes and Flowcharts**👨‍🔧
+## **Wireframes
 
 ### **Wireframes**
-I used [Balsamic](https://balsamiq.com/wireframes/) to create wireframes for my website. 
 
-You can find my wireframes below:
-
-#### Desktop Wireframes
 * [Wireframes](wireframes/desktop.pdf)
-
-#### Mobile Wireframes
-* [Wireframes](wireframes/mobile.pdf)
 
 ### **Database Structure**
 
@@ -118,7 +114,7 @@ Key             | Value
 _id             | ObjectId
 name            | String
 
-## **Features**🤖
+## **Features**
 
 ### **Existing Features**
 
@@ -139,7 +135,7 @@ name            | String
 * Have a 'forget password' functionality.
 * Have a functionality to rate the recipes.
 
-## **Technologies used**👀
+## **Technologies used**
 
 ### **Languages**
 
@@ -243,72 +239,52 @@ I have testing the search functionality with empty field, with a wrong word, and
  
  * **Verdict**
  The test has passed all the criteria and works like planned.
+ 
+ ### Deployment
+
+Following the documentation in the course for deploying to Heroku, and also the following guide [Getting Started With Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python#define-a-procfile) allowed me to relatively easily deploy the application to Heroku:
+
+- I was required to set up an alternative git remote using `git remote -a heroku louis-g-ms3` so that I was able to push changes to Heroku
+- I was required to set up some config (environment) variables that could be used to get the port used by the application/connection strings etc
+- I was required to create a Procfile in the root of my project with the following `web: python runserver.py 0.0.0.0:5000`
+- Once I had the Heroku CLI installed, I had to create a master branch in GIT and use `git push heroko master` to try deploying the application
+- This flagged up a number of errors that required fixing, including missing dependencies from the requirements.txt file, specifically dnspython and flask-mongoengine, as well as the missing config variables above (it couldn't connect to the port after 30 seconds)
+
+- To connect to the application locally, ensure you have all of the requirements installed (you can use `pip install -r requirements.txt`)
 
 
-https://www.shutterstock.com/image-photo/table-food-top-view-467823860
+Deployed using GitHub Pages accessed via the link below
+ - https://gersonvj.github.io/TWC---THE-WEATHER-CHANNEL/index.html is main content page - all other navigatable via this webpage
 
-Heroku APP - 
+  **Process**
+   1. Created a Github account at https://github.com My account: https://github.com/gersonvj
 
-https://myrecipeproject.herokuapp.com/
+   2. Synced folder on local machine to Github Repo via VsCode: https://gersonvj.github.io/My-Recipe/
+
+   3. To publish the project to see it on the web go to Settings on Repo , scroll down to the heading, GitHub Pages. Under the Source setting, Use drop-down menu to select master branch as a publishing source and save. Refreshed the github page, and you are then given a url where your page is published; The site is now published on gitHub pages at https://gersonvj.github.io/My-Recipe/
+
+   4. To run this code on your local machine, you would go to my respository at https://gersonvj.github.io/My-Recipe/ and on the home page on the right hand side just above all the files, you will see a green button that says, "Clone or download", this button will give you options to clone with HTTPS, open in desktop or download as a zip file. Then --> click the clipboard item to copy the Https address of the repo.
+   
+   5. Open Git Bash/Terminal: 
+   CD the working directory to the location where you want the cloned directory to be made.you can use mkdir command to make a new directory, then cd into it.Type git clone, and then paste the URL: https://github.com/gersonvj/My-Recipe.git Press Enter. The clone is created.
+   For more information about the above process; https://help.github.com/en/github/using-git/which-remote-url-should-i-use
 
 
-Heroku needs to setup some files before you to run the app.
 
-First, we need to tell Heroku which applications and dependencies are required to run our app:
-"pip3 freeze --local > requirements.txt".
-Next, the Procfile is what Heroku looks for to know which file runs the app, and how to
-run it, so we'll use the echo command: "echo web: python app.py > Procfile".
-Remember that the Procfile has a capital 'P', and no file extension.
-We can check that the files were created successfully, and as you can see, the requirements.txt file
-lists the dependencies that are needed for Flask.
-One of these is called Werkzeug, which we'll learn more about later when setting up User
-Authentication on our project.
-The Procfile might add a blank line at the bottom, and sometimes this can cause problems
-when running our app on Heroku, so just delete that line and save the file.
-Let's head over to Heroku.com, and once you're logged in on your dashboard, we can click
-to 'Create a New App'.
-If you recall from our previous lessons, the Heroku app must be unique, and generally use
-a 'dash' or 'minus' instead of spaces, and all lowercase letters.
-I'm going to call my app "flask-task-manager-project", which means that's no longer available for
-you to use, so try something similar, perhaps try including your name.
-Next, select the region closest to you, and since I'm in Ireland, I'll select Europe,
-then click 'Create App'.
-In order to connect our app, we can do one of a few different options.
-As you've learned from the previous project using Heroku, we could use the Heroku CLI
-to connect our app using the steps outlined below.
-However, to simplify the process, we'll setup Automatic Deployment from our GitHub repository.
-Make sure your GitHub profile is displayed, then add your repository name, which I've
-named exactly the same as my Heroku app, then click 'Search'.
-Once it finds your repo, click to connect to this app.
-Before we click to Enable Automatic Deployment, we still have a few more steps to do, otherwise
-we'll get unwanted application errors.
-Since we've contained our environment variables within a hidden env.py file, Heroku won't
-be able to read those variables.
-Click on the 'Settings' tab for your app, and then click on 'Reveal Config Vars', where
-we can securely tell Heroku which variables are required.
-Our env.py file contains a few different variables.
-Make sure not to include any "quotes" for the key, or the value.
-The first variable is IP, with the value of 0.0.0.0.
-Next, the PORT, which is 5000.
-For the SECRET_KEY, let's copy that from the env.py file, then paste it into Heroku.
-We don't have the MONGO_URI string yet, so we'll leave that blank for now.
-Finally, the MONGO_DBNAME is the name of our database, so task_manager.
-Let's go back to the 'Deploy' tab, but before we connect it, we need to push our two new
-files to the repository.
-Back within the terminal, I've typed 'git status' just to confirm that those are the
-only pending changes.
-Add the requirements file to the staging area: "git add requirements.txt".
-Then commit the file: "git commit -m "Add requirements.txt".
-Next, add the Procfile: "git add Procfile".
-Then commit that file as well: "git commit -m "Add Procfile".
-Finally, "git push" in order to send those files to GitHub.
-When we head back over to Heroku, we can now safely 'Enable Automatic Deployment', as everything
-should be available on our repository.
-I've only got the main branch for the project, so click 'Deploy Branch'.
-Heroku will now receive the code from GitHub, and start building the app using our required
-packages.
-That should take a minute to build, and hopefully once it's done, you'll also see "Your app
-was successfully deployed."
-Click "View" to launch your new app.
-Wonderful, the deployed site is now available, and should automatically update whenever we
-push changes to the GitHub repository.
+# Credits
+
+* To complete this project I used Code Institute student template: [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+
+<h5>Media</h5>
+<ul>
+  <li>The artwork used in this site were obtained from: www.shutterstock.com</li>
+</ul>
+
+<h5>Acknowledgements</h5>
+<ul>
+  <li>I would like to thank Tim Nelson from Code Institute for the brilliant flask/mongoDB lessons.</li>
+</ul>
+
+
+
