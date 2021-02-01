@@ -249,10 +249,38 @@ Following the documentation in the course for deploying to Heroku, and also the 
 - To connect to the application locally, ensure you have all of the requirements installed (you can use `pip install -r requirements.txt`)
 
 
-https://www.shutterstock.com/image-photo/table-food-top-view-467823860
+Deployed using GitHub Pages accessed via the link below
+ - https://gersonvj.github.io/TWC---THE-WEATHER-CHANNEL/index.html is main content page - all other navigatable via this webpage
 
-Heroku APP - 
+  **Process**
+   1. Created a Github account at https://github.com My account: https://github.com/gersonvj
 
-https://myrecipeproject.herokuapp.com/
+   2. Synced folder on local machine to Github Repo via VsCode: https://gersonvj.github.io/My-Recipe/
+
+   3. To publish the project to see it on the web go to Settings on Repo , scroll down to the heading, GitHub Pages. Under the Source setting, Use drop-down menu to select master branch as a publishing source and save. Refreshed the github page, and you are then given a url where your page is published; The site is now published on gitHub pages at https://gersonvj.github.io/My-Recipe/
+
+   4. To run this code on your local machine, you would go to my respository at https://gersonvj.github.io/My-Recipe/ and on the home page on the right hand side just above all the files, you will see a green button that says, "Clone or download", this button will give you options to clone with HTTPS, open in desktop or download as a zip file. Then --> click the clipboard item to copy the Https address of the repo.
+   
+   5. Open Git Bash/Terminal: 
+   CD the working directory to the location where you want the cloned directory to be made.you can use mkdir command to make a new directory, then cd into it.Type git clone, and then paste the URL: https://github.com/gersonvj/My-Recipe.git Press Enter. The clone is created.
+   For more information about the above process; https://help.github.com/en/github/using-git/which-remote-url-should-i-use
+
+
+
+# Credits
+
+* To complete this project I used Code Institute student template: [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+
+<h5>Media</h5>
+<ul>
+  <li>The artwork used in this site were obtained from: www.shutterstock.com</li>
+</ul>
+
+<h5>Acknowledgements</h5>
+<ul>
+  <li>I would like to thank Tim Nelson from Code Institute for the brilliant flask/mongoDB lessons.</li>
+</ul>
+
 
 
