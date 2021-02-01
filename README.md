@@ -1,4 +1,4 @@
-### [View TWC website in Heroku.com](https://myrecipeproject.herokuapp.com/)
+### [View My Recipe APP in Heroku.com](https://myrecipeproject.herokuapp.com/)
 
 ## **Project Goal**
 
