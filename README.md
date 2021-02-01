@@ -78,9 +78,9 @@ Materialize provides various elements of CSS and Javascript which is very helpfu
 
 ### **Wireframes**
 
-* [Wireframes](wireframes/recipe1.jpg) - First concept of the APP
-* [Wireframes](wireframes/screencapture-materializecss-parallax-demo-html-2021-01-28-23_52_41.pdf) - Home page concept
-* [Wireframes](wireframes/wireframe_app.jpg) - APP concept
+* [Wireframes](wireframe/recipe1.jpg) - First concept of the APP
+* [Wireframes](wireframe/screencapture-materializecss-parallax-demo-html-2021-01-28-23_52_41.pdf) - Home page concept
+* [Wireframes](wireframe/wireframe_app.jpg) - APP concept
 
 ### **Database Structure**
 
