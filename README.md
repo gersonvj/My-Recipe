@@ -12,10 +12,7 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
     * [Site Owners Goals](#site-owners-goals)
     * [User Requirements and Expectations](#user-requirements-and-expectations)
         * [Requirements](#requirements)
-        * [Expectations](#expectations)
-    * [Design Choices](#design-choices)🎨
-        * [Fonts](#fonts)
-        * [Structure](#structure)
+        * [Expectations](#expectations)    
 * [Wireframes and Flowcharts](#wireframes-and-flowcharts)👨‍🔧
     * [Wireframes](#wireframes)
     * [Flowcharts](#flowcharts)
@@ -36,18 +33,15 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
 ### **User Goals**
 
 * This web application has to work well on all kind of devices like mobile phones, tables and desktops.
-* I want to have a clear dashboard where I can see all the different recipes I have created. 
-* I want to have a profile for me where I can create, update and delete recipes. 
+* I want to have a profile for me where I can see all the different recipes I have created and create, update and delete recipes.
 * I want to see the recipes even if I don't have registered. 
-* I want to be able to write a review about an recipe.
 * The web application has to be user friendly.
-* Visually appealing web application.
+
 
 ### **User Stories**
 
 * As a user, I would like to be able to register for the web application so I can have my personal environment.
-* As a user, I want to login after I created an account and see my previous inserted information.
-* As a user, I want a home dashboard page that shows the latest recipes added.
+* As a user, I want a profile dashboard page that shows the latest recipes added.
 * As a user, I want to see the recipes without log in.
 * As a user, I want to be able to search recipes.
 * As a user, I want the web application to be easy to use. 
@@ -63,23 +57,22 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
 #### Requirements
 
 * Easy to navigate by using the few buttons.
-* Appealing dashboard with a functional overview.
-* Easy way to add a recipe to the dashboard.
+* Easy way to add a recipe
 * Ability to edit and delete existing recipes.
-* Ability to let a review.
+
 
 #### Expectations
 
 * When you have multiple recipes, it should be easy to navigate between them.
 * To have a dashboard where all the necessary information is visible.
 * It should be easy to add another recipe.
-* It should be easy to add a review in a recipe.
+
 
 #### Structure
 
 I have chosen to use [Materialize](https://materializecss.com/) to create an overall structure for my website. 
 Materialize provides various elements of CSS and Javascript which is very helpful to keep a good structure on your page. 
-The reason why I choose Materiaize is mainly due to the various features they offer like a datepicker, floating action button etc. 
+
 
 ## **Wireframes and Flowcharts**👨‍🔧
 
@@ -94,19 +87,9 @@ You can find my wireframes below:
 #### Mobile Wireframes
 * [Wireframes](wireframes/mobile.pdf)
 
-### **Flowcharts**
-
-I have decided to make a flowchart to completely understand each step of the process. 
-I have used [Draw.io](https://draw.io/) to make this flowchart which you can view below: 
-
-* [Flowchart](wireframes/flowchart.pdf)
-
 ### **Database Structure**
 
-I have created an database entities in [Draw.io](https://draw.io/)
-* [Database](wireframes/data.png)
-
-I also have used MongoDB to set up the database for this project with the following collections: 
+I have used MongoDB to set up the database for this project with the following collections: 
 
 #### **Users:**
 
@@ -114,21 +97,19 @@ Key      | Value
 ---------|-----------
 _id      | ObjectId
 name     | String
-email    | String
 password | String
 
-#### **Recipe:**
+#### **ingredients:**
 
 Key             | Value
 ----------------|-----------
 _id             | ObjectId
-user_id         | String
-name            | String
-category        | String
-time            | String
-yield           | String
+category_name   | String
+recipe          | String
 ingredients     | String
-steps           | String
+cooking         | String
+description     | String
+username        | String
 
 #### **Category:**
 
@@ -156,7 +137,6 @@ name            | String
 * Have a fucionality to insert images within the recipes.
 * Have a more extensive user profile with, profile image, preferences and email to which you can send updates, newsletters etc.
 * Have a 'forget password' functionality.
-* Include a confirm password to make sure the user has chosen the password he/she wanted. 
 * Have a functionality to rate the recipes.
 
 ## **Technologies used**👀
@@ -176,13 +156,11 @@ name            | String
 * [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 * [Font Awesome](https://fontawesome.com/)
 * [Materialize](https://materializecss.com/)
-* [Google Fonts](https://fonts.google.com/)
 * [jQuery](https://jquery.com/)
 
 ### **Tools**
 * [Git](https://git-scm.com/)
 * [Heroku](https://www.heroku.com/)
-* [Balsamic](https://balsamiq.com/wireframes/)
 * [W3C HTML Validation Service](https://validator.w3.org/)
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
@@ -197,24 +175,18 @@ name            | String
 I want to create a account to be able to add, read, update and delete recipes.
 
 * **Implementation**  
-I created a form where the user can add their name, email, and choose a password. 
+I created a form where the user can add their name and choose a password. 
 I have used the pattern attribute to only allow certain characters for the name, email, and password. 
-Correct feedback will be displayed whenever the user doesn't meet the pattern critera. 
 Before creating the new account, I will check in the database if the email already exists. 
 If so, correct feedback will be displayed to the user so he can choose another username. 
 Password will be stored with the help of the password generate hash so it is stored safely.
-After the registration was succesfull, the user will be redirected to the My Recipes page to add their first recipe.
+After the registration was succesfull, the user will be redirected to the Profile page to add their first recipe.
 In case the user wrongfully clicked on register instead of sign-in, a link to the sign-in page is provided so the user doesn't have to go back. 
-
-I have used a variable (register) to make the difference between the register and sign-in form.
-When register is equal to True, I added the span which explains the requested format.
-By implementing this, I have managed to merge the register and sign-in form into 1 form which simplifies my code. 
 
 
 * **Test**  
 I have tried to create an account with an already existing email. Correct feedback is displayed.
-Whenever I didn't meet the pattern criteria, the correct feedback was displayed, explaining which charachters etc are allowed. 
-User acccount is created whenever all criteria was met and user is being redirect to My Recipes.
+User acccount is created whenever all criteria was met and user is being redirect to Profile page.
 
 
 * **Result**  
@@ -232,24 +204,22 @@ The test has passed all the criteria and works like planned.
 #### User story: As a user, I want to login after I created an account and see my previous inserted information.
 
 * **Plan**  
-My plan is to create a login form where the user can fill in its email and password.
-After signing in, the user will be redirected to the My Recipe page where the user can see the previously inserted recipes.
-In case the user doesn't have any Recipe added to its profile, a message will be displayed with "no recipes added" and a link to add first recipe.
+My plan is to create a login form where the user can fill in its name and password.
+After signing in, the user will be redirected to the Profile page where the user can see the previously inserted recipes.
 
 * **Implementation**  
-I created a form where the user can fill in its email and password which will be verified with the information stored in the database. 
+I created a form where the user can fill in its name and password which will be verified with the information stored in the database. 
 When the wrong information is being filled in, the correct feedback will be provided to the user. 
 In case the user wrongfully clicked on sign-in instead of register, a link to the register page is provided so the user doesn't have to go back. 
 
 * **Test**  
 Signing in with the correct email and password works as planned and the correct page will be displayed. 
 When the user fills in the wrong email and/or password, the same message is being displayed on the screen. 
-Also here the feedback message didn't stand out well enough so I have changed the color to red. 
-Redirecting to register page and 'back to homepage' link works as well. 
+
 
 * **Result**  
 Sign-in form is working as planned and the input is being verified correctly with the stored information of the database.
-Redirection to the correct page works as well as planned so the user can either add a recipe on My Recipes page or view its previously inserted recipes.
+Redirection to the correct page works as well as planned so the user can either add a recipe on Profile page or view its previously inserted recipes.
 Tested the sign-in form on various browers and devices and the form is responsive and userfriendly. 
 Feedback provided to the user stands out nicely. 
 
@@ -257,33 +227,13 @@ Feedback provided to the user stands out nicely.
 The test has passed all the criteria and works like planned.
 
 
-#### User story: As a user, I want a home dashboard page that shows the latest recipes added.
-
-* **Plan**
-My plan was create a home page that shows the latest recipes added, even for user that are not subscribe, they can have access to the home page
-and they can see the recipes.
-
-* **Implementation** 
-I created a panel with the last six recipes added, I used a for reverse to get the recipes backwords.
-
-* **Test** 
-As planned every user with credentials or not can have access to the recipes.
- 
- * **Result**  
- It works just fine and show the user the last six recipes as planned.
- 
- * **Verdict**    
-The test has passed all the criteria and works like planned.
-
-
 #### User story: As a user, I want to be able to search recipes.
 
 * **Plan**
-The plan is create a search bar where users can search recipes by nome of the recipe or ingredients.
+The plan is create a search bar where users can search recipes by name of the recipe.
 
 * **Implementation** 
-First I added a search bar to home and recipes pages, then I created indexes to search in mongo db so that user can search by name of the recipe or ingredients.
-Then I created two functions in app.py, one for for search in the home page and another to search in the recipes page.
+First I added a search bar to home and recipes pages, then I created indexes to search in mongo db so that user can search by name of the recipe.
 
 * **Test** 
 I have testing the search functionality with empty field, with a wrong word, and with a word in the database and all response was correct.
@@ -293,6 +243,8 @@ I have testing the search functionality with empty field, with a wrong word, and
  
  * **Verdict**
  The test has passed all the criteria and works like planned.
+
+ 
 Heroku APP - 
 
 Heroku needs to setup some files before you to run the app.
