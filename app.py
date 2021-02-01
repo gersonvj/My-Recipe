@@ -57,26 +57,6 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/add_task", methods=["GET", "POST"])
-def add_task():
-    if request.method == "POST":
-        is_urgent = "on" if request.form.get("is_urgent") else "off"
-        task = {
-            "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
-            "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
-        }
-        mongo.db.tasks.insert_one(task)
-        flash("Task Successfully Added")
-        return redirect(url_for("get_tasks"))
-
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_task.html", categories=categories)
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -116,11 +96,11 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "cooking": request.form.get("cooking"),
             "description": request.form.get("description"),
-            "created_by": session["user"]
+            "username": session["username"]
         }
         mongo.db.tasks.insert_one(recipe)
-        flash("Task Successfully Added")
-        return redirect(url_for("get_tasks"))
+        flash("Recipe Successfully Added")
+        return redirect(url_for("get_ingredients"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("new_recipe.html", categories=categories)
