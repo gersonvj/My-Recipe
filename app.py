@@ -99,7 +99,7 @@ def add_recipe():
         }
 
         mongo.db.ingredients.insert_one(recipe)
-        flash("Task Successfully Added")
+        flash("Recipe Successfully Added")
         return profile(session["user"])
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -138,7 +138,7 @@ def edit_recipe(recipe_id):
             "username": session["user"]
         }
         mongo.db.ingredients.update({"_id": ObjectId(recipe_id)}, recipe)
-        flash("Task Successfully Updated")
+        flash("Recipe Successfully Updated")
         return profile(session["user"])
 
     recipe = mongo.db.ingredients.find_one({"_id": ObjectId(recipe_id)})
