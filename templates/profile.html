@@ -25,9 +25,9 @@
             <div class="card-content white-text">
             <span class="card-title">{{ ingredient.category_name }}</span>
                 <p>{{ ingredient.recipe }}</p>
-                <p>{{ ingredient.recipe }}<br>
                 <p>{{ ingredient.ingredients }}</p>
                 <p>{{ ingredient.cooking }}</p>
+                <p>{{ ingredient.username }}</p>
             </div>
             <div class="card-action">
             <a href="{{ url_for('edit_recipe', recipe_id=ingredient._id) }}" class="btn-small blue accent-4">Edit Recipe</a>
