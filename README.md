@@ -244,7 +244,9 @@ I have testing the search functionality with empty field, with a wrong word, and
  * **Verdict**
  The test has passed all the criteria and works like planned.
 
- 
+
+https://www.shutterstock.com/image-photo/table-food-top-view-467823860
+
 Heroku APP - 
 
 Heroku needs to setup some files before you to run the app.
