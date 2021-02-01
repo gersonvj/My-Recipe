@@ -75,18 +75,6 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
 * It should be easy to add another recipe.
 * It should be easy to add a review in a recipe.
 
-### **Design Choices**🎨
-
-I made a research in [Jenn David Design](https://jenndavid.com/colors-that-influence-food-sales-infographic/ "jenndavid.com") website, where I found that a mix of red, orange and green would be a nice look for a web application that present recipes. Then I have used [Coolors](https://coolors.co/ "Coolors.co") to come up with a pallete of colors that I already had chosen.
-
-![palette](https://github.com/alychinque/CookBook/blob/master/wireframes/palette.png)
-
-#### Fonts
-
-I have visited [Google Fonts](https://fonts.google.com/ "Google Fonts") in order to find appropriate fonts for my web application.
-For the titles and subtitles, I have used the font [Redressed](https://fonts.google.com/specimen/Redressed "Redressed") 
-and for the main text I have used [Bodoni Moda](https://fonts.google.com/specimen/Bodoni+Moda "Bodoni Moda") and for the brand I have used [Patua One](https://fonts.google.com/specimen/Patua+One).
-
 #### Structure
 
 I have chosen to use [Materialize](https://materializecss.com/) to create an overall structure for my website. 

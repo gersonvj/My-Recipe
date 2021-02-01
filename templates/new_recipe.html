@@ -18,45 +18,34 @@
 					<label for="category_name">Task Category</label>
 				</div>
 			</div>
-            <!-- task name -->
+            <!-- recipe name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="task_name" name="task_name" minlength="5" maxlength="50"
                         type="text" class="validate" required>
-                    <label for="task_name">Task Name</label>
+                    <label for="task_name">recipe name</label>
                 </div>
             </div>
-            <!-- task description -->
+            <!-- recipe ingredients -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
                     <textarea id="task_description" name="task_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="task_description">Task Description</label>
+                        maxlength="300" class="materialize-textarea validate" required></textarea>
+                    <label for="task_description">Recipe ingredients</label>
                 </div>
             </div>
-            <!-- due date picker -->
+            <!-- recipe steps -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
-                    <label for="due_date">Due Date</label>
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <textarea id="task_description" name="task_description" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                    <label for="task_description">Recipe steps</label>
                 </div>
             </div>
-            <!-- is urgent toggle -->
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-						<label for="is_urgent">
-                            <input type="checkbox" id="is_urgent" name="is_urgent">
-                            <span class="lever"></span>
-                            Is Urgent
-                        </label>
-					</div>
-				</div>
-			</div>
+            
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">

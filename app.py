@@ -106,9 +106,29 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if request.method == "POST":
+        
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe": request.form.get("recipe"),
+            "ingredients": request.form.get("ingredients"),
+            "cooking": request.form.get("cooking"),
+            "description": request.form.get("description"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(recipe)
+        flash("Task Successfully Added")
+        return redirect(url_for("get_tasks"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("new_recipe.html", categories=categories)
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    # grab the recipe user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
