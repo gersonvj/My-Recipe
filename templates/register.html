@@ -7,7 +7,9 @@
             {% if messages %}
             <ul class=flashes>
             {% for message in messages %}
-                <li>{{ message }}</li>
+                <div class="card-panel green lighten-2 center">
+                    <li>{{ message }}</li>
+                </div>
             {% endfor %}
             </ul>
             {% endif %}
