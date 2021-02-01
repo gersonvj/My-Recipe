@@ -137,12 +137,12 @@ def edit_recipe(recipe_id):
             "cooking": request.form.get("cooking"),
             "username": session["user"]
         }
-        mongo.db.tasks.update({"_id": ObjectId(recipe_id)}, submit)
+        mongo.db.ingredients.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Task Successfully Updated")
 
-    recipe = mongo.db.tasks.find_one({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.ingredients.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("new_recipe.html", task=task, categories=categories)
+    return render_template("new_recipe.html", recipe=recipe, categories=categories)
 
 
 if __name__ == "__main__":
