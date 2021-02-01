@@ -139,6 +139,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.ingredients.update({"_id": ObjectId(recipe_id)}, recipe)
         flash("Task Successfully Updated")
+        return profile(session["user"])
 
     recipe = mongo.db.ingredients.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
