@@ -119,10 +119,10 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/delete_recipe/<task_id>")
+@app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.ingredients.remove({"_id": ObjectId(recipe_id)})
-    flash("Task Successfully Deleted")
+    flash("Recipe Successfully Deleted")
     return profile(session["user"])
 
 
