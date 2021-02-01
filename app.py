@@ -119,6 +119,13 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/delete_recipe/<task_id>")
+def delete_recipe(recipe_id):
+    mongo.db.ingredients.remove({"_id": ObjectId(recipe_id)})
+    flash("Task Successfully Deleted")
+    return profile(session["user"])
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
