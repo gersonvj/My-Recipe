@@ -25,7 +25,9 @@
                     {% endif %}
                     <li><a href="{{ url_for('get_ingredients')}}">Our Recipes</a></li>
                     <li><a href="{{ url_for('login') }}">Log in</a></li>
+                    {% if session.user %}
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
@@ -34,10 +36,14 @@
         <ul class="sidenav opaco" id="mobile-demo">
             <li><h4 class="center-align text-shadow amber-text text-darken-3">My Recipe</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            {% if session.user %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            {% endif %}
             <li><a href="{{ url_for('get_ingredients')}}">Our Recipes</a></li>
             <li><a href="{{ url_for('login') }}">Log in</a></li>
+            {% if session.user %}
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% endif %}
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
