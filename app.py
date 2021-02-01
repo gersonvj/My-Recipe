@@ -126,6 +126,25 @@ def delete_recipe(recipe_id):
     return profile(session["user"])
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe": request.form.get("recipe"),
+            "ingredients": request.form.get("ingredients"),
+            "cooking": request.form.get("cooking"),
+            "username": session["user"]
+        }
+        mongo.db.tasks.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Task Successfully Updated")
+
+    recipe = mongo.db.tasks.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("new_recipe.html", task=task, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
