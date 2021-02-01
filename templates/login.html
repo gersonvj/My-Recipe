@@ -11,12 +11,14 @@
                 {% if messages %}
                 <ul class=flashes>
                 {% for message in messages %}
+                <div class="card-panel teal lighten-2 center">
                     <li>{{ message }}</li>
+                </div>
                 {% endfor %}
                 </ul>
                 {% endif %}
                 {% endwith %}
-                
+
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
