@@ -1,4 +1,4 @@
-![multi platform](https://myrecipeproject.herokuapp.com/)
+### [View TWC website in Heroku.com](https://myrecipeproject.herokuapp.com/)
 
 ## **Project Goal**
 
