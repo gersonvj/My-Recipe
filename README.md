@@ -6,20 +6,20 @@ This is a web application that implements the principles of the C.R.U.D. cycle a
 
 
   ## Table of contents 
-* [UX](#ux)🎯
+* [UX](#ux)
     * [User Goals](#user-goals)
     * [User Stories](#user-stories)
     * [Site Owners Goals](#site-owners-goals)
     * [User Requirements and Expectations](#user-requirements-and-expectations)
         * [Requirements](#requirements)
         * [Expectations](#expectations)    
-* [Wireframes](#wireframes-and-flowcharts)👨‍🔧
+* [Wireframes](#wireframes)
     * [Wireframes](#wireframes)
     * [Database Structure](#database-structure)
-* [Features](#features)🤖
+* [Features](#features)
     * [Existing Features](#existing-features)
     * [Features to be implemented](#features-to-be-implemented)
-* [Technologies used](#technologies-used)👀
+* [Technologies used](#technologies-used)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
     * [Tools](#tools)
