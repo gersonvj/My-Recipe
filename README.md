@@ -249,6 +249,9 @@ https://www.shutterstock.com/image-photo/table-food-top-view-467823860
 
 Heroku APP - 
 
+https://myrecipeproject.herokuapp.com/
+
+
 Heroku needs to setup some files before you to run the app.
 
 First, we need to tell Heroku which applications and dependencies are required to run our app:
