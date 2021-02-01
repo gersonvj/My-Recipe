@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-![multi platform](https://myrecipeproject.herokuapp.com/)
-=======
 ### [View My Recipe APP in Heroku.com](https://myrecipeproject.herokuapp.com/)
->>>>>>> b7c3c8c0db25cadaf86ea459e08a025dbb46dea9
+
 
 ## **Project Goal**
 
@@ -81,7 +78,9 @@ Materialize provides various elements of CSS and Javascript which is very helpfu
 
 ### **Wireframes**
 
-* [Wireframes](wireframes/desktop.pdf)
+* [Wireframes](wireframes/recipe1.jpg) - First concept of the APP
+* [Wireframes](wireframes/screencapture-materializecss-parallax-demo-html-2021-01-28-23_52_41.pdf) - Home page concept
+* [Wireframes](wireframes/wireframe_app.jpg) - APP concept
 
 ### **Database Structure**
 
