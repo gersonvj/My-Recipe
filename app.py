@@ -157,8 +157,8 @@ def edit_recipe(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipe = list(mongo.db.ingredients.find({"$text": {"$search": query}}))
-    return render_template("ingredients.html", recipe=recipe)
+    ingredients = list(mongo.db.ingredients.find({"$text": {"$search": query}}))
+    return render_template("ingredients.html", ingredients=ingredients)
 
 
 if __name__ == "__main__":
